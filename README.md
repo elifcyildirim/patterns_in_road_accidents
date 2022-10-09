@@ -60,7 +60,7 @@ The final word on the prediction of accident severity with this model: It may we
 
 # Accident hotspots in the UK
 
-Based on the data covering a 5-year period between the years 2016 and 2020, there are 24 junctions in the UK which are hotspots for seriously severe accidents. It is notable that almost all of them are 'Give way or uncontrolled' type of junctions. My preventative action proposal is installation of traffic lights to these junctions. In addition to that, presence of traffic police at these junctions from time to time may help enforcing the law and having more control of accidents in these hotspots.
+Based on the data covering a 5-year period between the years 2016 and 2020, there are 24 junctions in the UK which are hotspots for seriously severe accidents. It is notable that almost all of them are 'Give way or uncontrolled' type of junctions. My preventative action proposal is installation of traffic lights to these junctions. In addition to that, presence of traffic police at these junctions from time to time may help enforce the law and having more control of accidents in these hotspots.
 
 This study also identfied the top 10 interregional roads (A-Roads) with the highest number of accidents. The majority of them are in England, one is partially in Scotland and one is in the Wales. Higher population density of England in comparison with the Scotland and the Wales may be playing a role in this result.
 
