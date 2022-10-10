@@ -32,6 +32,10 @@ Some portion of this project was dedicated to understand whether accident severi
 
 Visualizations can be found on Tableau Public under the names 1) UK_Road_Safety and 2) UK_accident_hotspot_junctions. Links:
 
+https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_link
+
+https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link
+
 
 # Machine Learning Model to Predict Accident Severity
 
