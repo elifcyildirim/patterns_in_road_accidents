@@ -5,7 +5,7 @@
 * [Abstract](#section1)
 * [Data](#section2)
 * [Exploratory Data Analysis (EDA)](#section3)
-* [Machine Learning Model to Predict Accident Severity](#section4)
+* [Machine Learning to Predict Accident Severity](#section4)
 * [Validation Metrics](#section5)
 * [Accident hotspots in the UK](#section6)
 * [Tools](#section7)
