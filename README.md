@@ -1,4 +1,4 @@
-# Patterns in Road Accidents: The case of the United Kingdom
+# Patterns in Road Accidents: The case of United Kingdom
 ![london_congested.jpeg](images/london_congested.jpeg)
 ### Index:
 
