@@ -100,8 +100,8 @@ Tableau
 
 <a id='section8'></a>
 ### References
-https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data
+[Road safety datasets](https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data)
 
-https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries#:~:text=Road%20traffic%20injuries%20are%20the,pedestrians%2C%20cyclists%2C%20and%20motorcyclists
+[World Health Organization](https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries#:~:text=Road%20traffic%20injuries%20are%20the,pedestrians%2C%20cyclists%2C%20and%20motorcyclists)
+[Daily Life In London](https://www.gettyimages.com/detail/news-photo/cars-and-buses-queue-in-a-long-traffic-jam-on-knightsbridge-news-photo/1229230414?adppopup=true)
 
-London traffic photo by David Cliff/NurPhoto via Getty Images
