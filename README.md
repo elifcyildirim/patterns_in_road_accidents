@@ -87,6 +87,9 @@ Based on the data covering a 5-year period between the years 2016 and 2020, ther
 
 This study also identfied the top 10 interregional roads (A-Roads) with the highest number of accidents. The majority of them are in England, one is partially in Scotland and one is in the Wales. Higher population density of England in comparison with the Scotland and the Wales may be playing a role in this result.
 
+![junctions.png](images/junctions.png)
+![A-roads.png](images/A-roads.png)
+
 <a id='section7'></a>
 ### Tools
 
