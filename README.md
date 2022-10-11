@@ -51,7 +51,7 @@ https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_l
 https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link
 
 <a id='section4'></a>
-### Machine Learning Model to Predict Accident Severity
+### Machine Learning to Predict Accident Severity
 
 I built both a logistic regression and a KNN classification model to predict severity of hypothetical accidents. Both models predict whether a hypothetical accident would be classified as a slightly severe or a seriously severe accident based on information about 38 features. These features are listed as follows (not in the order of importance):
 
