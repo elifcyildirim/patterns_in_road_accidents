@@ -1,9 +1,22 @@
 # Patterns in Road Accidents
 
-# Abstract
+### Index:
+
+* [Abstract](#section1)
+* [Data](#section2)
+* [Exploratory Data Analysis (EDA)](#section3)
+* [Machine Learning Model to Predict Accident Severity](#section4)
+* [Validation Metrics](#section5)
+* [Accident hotspots in the UK](#section6)
+* [Tools](#section7)
+* [References](#section8)
+
+<a id='section1'></a>
+### Abstract
 World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. In the light of the observation of these patterns, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, day of the week, light conditions etc. Among the results of this project, I also present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020.
 
-# Data
+<a id='section2'></a>
+#### Data
 For this project, I downloaded the road safety datasets for 2016-2020 which was published by the UK Department for Transport. The three datasets that are used in the project provide detailed information on each i) accident, ii) vehicle, and iii) casualty on all registered accidents. The data is in an encoded form rather than textual strings and the lookup table is available from the same website.
 
 The shapes of the datasets are
@@ -16,7 +29,8 @@ iii)	casualty dataset: 781716 rows × 18 columns.
 
 I combined the datasets using the accident index and the vehicle reference. Prior to any data wrangling, the merged dataset had 781716 rows × 80 columns.
 
-# Exploratory Data Analysis (EDA)
+<a id='section3'></a>
+### Exploratory Data Analysis (EDA)
 
 Some portion of this project was dedicated to understand whether accident severity may be considered as a function of certain conditions. In the dataset, accident severity is described in three classes: Slight, serious, and fatal. Exploratory data analysis reveals that existence of certain conditions may be playing a role in the severity of an accident while there are also some factors that may seemingly do not have an effect on accident severity. In fact, the investigation of the i) first point of impact, ii) light conditions, iii) weather conditions, and iv) casualty type parameters reveal the following information. 
 
@@ -36,8 +50,8 @@ https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_l
 
 https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link
 
-
-# Machine Learning Model to Predict Accident Severity
+<a id='section4'></a>
+### Machine Learning Model to Predict Accident Severity
 
 I built both a logistic regression and a KNN classification model to predict severity of hypothetical accidents. Both models predict whether a hypothetical accident would be classified as a slightly severe or a seriously severe accident based on information about 38 features. These features are listed as follows (not in the order of importance):
 
@@ -55,7 +69,8 @@ The original classes in the accident severity (slight, serious, and fatal) were 
 
 The model was built using the data from the year 2017 by splitting the data into a train and a test set. The model is validated twice using the data from 2016 and 2020 separately. Both the test and validation were carried out for the logistic regression and KNN classification and it is found that logistic regression classification performs better than the KNN classifier in this specific problem.
 
-# Validation Metrics
+<a id='section5'></a>
+### Validation Metrics
 
 The accuracy of the initial logistic regression model (before treatment with oversampling) is 80%, which may not seem too bad at first sight. The confusion matrix, however, tells a different story. Out of 5111 seriously severe accidents, the model was able to predict 215 true positives only. This means that the initial model fails in predicting the seriously-severe accidents, which is too expensive for the case of the road accidents. Evidently, accuracy is not a suitable model evaluation metric for this model. In the case of the accident severity predictions, recall and confusion matrix are our preferred model evaluation metrics.
 
@@ -65,13 +80,15 @@ For the purpose of predicting the seriously severe accidents, oversampled Logist
 
 The final word on the prediction of accident severity with this model: It may well be the case that the drivers' attention to the road and how responsible both the drivers and the pedestrians behave in traffic may be among many of the non-quantifiable features that are affecting the occurrence and severity of an accident. These are not incorporated into this model.
 
-# Accident hotspots in the UK
+<a id='section6'></a>
+### Accident hotspots in the UK
 
 Based on the data covering a 5-year period between the years 2016 and 2020, there are 24 junctions in the UK which are hotspots for seriously severe accidents. It is notable that almost all of them are 'Give way or uncontrolled' type of junctions. My preventative action proposal is installation of traffic lights to these junctions. In addition to that, presence of traffic police at these junctions from time to time may help enforce the law and having more control of accidents in these hotspots.
 
 This study also identfied the top 10 interregional roads (A-Roads) with the highest number of accidents. The majority of them are in England, one is partially in Scotland and one is in the Wales. Higher population density of England in comparison with the Scotland and the Wales may be playing a role in this result.
 
-# Tools
+<a id='section7'></a>
+### Tools
 
 Jupyter notebook 6.4.8.
 
@@ -83,7 +100,8 @@ MySql
 
 Tableau
 
-# References
+<a id='section8'></a>
+### References
 •	https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data
 
 •	https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries#:~:text=Road%20traffic%20injuries%20are%20the,pedestrians%2C%20cyclists%2C%20and%20motorcyclists.
