@@ -44,11 +44,10 @@ Some portion of this project was dedicated to understand whether accident severi
 
 •	Overall, 50% of all the casualties in road accidents are car occupants. In London, which is analyzed to have an idea of the casualty type specifically in the cities, the largest classes of casualties are the pedestrians and the cyclists. Car occupants make up only the 5% of the casualty population.
 
-Visualizations can be found on Tableau Public under the names 1) UK_Road_Safety and 2) UK_accident_hotspot_junctions. Links:
+Visualizations can be found on Tableau Public: 
 
-https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_link
-
-https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link
+1) [UK_Road_Safety](https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_link)
+2) [UK_accident_hotspot_junctions](https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 <a id='section4'></a>
 ### Machine Learning to Predict Accident Severity
@@ -106,7 +105,8 @@ Tableau
 
 <a id='section8'></a>
 ### References
-•	https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data
+https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data
 
-•	https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries#:~:text=Road%20traffic%20injuries%20are%20the,pedestrians%2C%20cyclists%2C%20and%20motorcyclists.
+https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries#:~:text=Road%20traffic%20injuries%20are%20the,pedestrians%2C%20cyclists%2C%20and%20motorcyclists
 
+London traffic photo by David Cliff/NurPhoto via Getty Images
