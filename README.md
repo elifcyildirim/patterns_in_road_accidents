@@ -13,7 +13,10 @@
 
 <a id='section1'></a>
 ### Abstract
-World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. In the light of the observation of these patterns, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, day of the week, light conditions etc. Among the results of this project, I also present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020.
+World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. Among the results of this project, I present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020. Furthermore, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, day of the week, light conditions etc. Visualizations can be found on Tableau Public: 
+
+1) [UK_Road_Safety](https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_link)
+2) [UK_accident_hotspot_junctions](https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 <a id='section2'></a>
 #### Data
@@ -36,18 +39,13 @@ Some portion of this project was dedicated to understand whether accident severi
 
 •	The likelihood of an accident being deathly is higher if the accidental hit is received from the front of the vehicle.
 
-•	Most accidents take place in the daylight and in good weather. 
+•	Most accidents take place in daylight and good weather. 
 
-•	The proportion of fatal accidents that are taking place in dark over daylight is higher compared with the similar proportion in the slightly severe and seriously severe cases. 
+•	The proportion of fatal accidents that take place in dark over daylight is higher in comparison with the proportion in the slightly severe and seriously severe cases. 
 
-•	Accident severity looks independent from weather conditions as the relative proportions of different weather conditions are not majorly different between each class of accident severity.
+•	The relative proportions of different weather conditions hardly vary between the each class of accident severity. This may point out that accident severity may be independent of the weather conditions
 
-•	Overall, 50% of all the casualties in road accidents are car occupants. In London, which is analyzed to have an idea of the casualty type specifically in the cities, the largest classes of casualties are the pedestrians and the cyclists. Car occupants make up only the 5% of the casualty population.
-
-Visualizations can be found on Tableau Public: 
-
-1) [UK_Road_Safety](https://public.tableau.com/shared/577XXZGPN?:display_count=n&:origin=viz_share_link)
-2) [UK_accident_hotspot_junctions](https://public.tableau.com/views/UK_accident_hotspot_junctions/Junctionsthathostedseriouslysevereaccidentswith100andmorecasualtiesoverthe5yearperiod2016-2020_24junctionsoverall_?:language=en-US&:display_count=n&:origin=viz_share_link)
+•	Overall, 50% of all the casualties in road accidents are car occupants. However, the largest two classes of casualties are the pedestrians and cyclists in large cities, for example in London. Car occupants make up only the 5% of the casualty population in London.
 
 <a id='section4'></a>
 ### Machine Learning to Predict Accident Severity
