@@ -1,5 +1,5 @@
 # Patterns in Road Accidents
-
+![london_congested.jpeg](images/london_congested.jpeg)
 ### Index:
 
 * [Abstract](#section1)
