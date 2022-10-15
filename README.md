@@ -22,7 +22,9 @@ For this project, I downloaded the [road safety datasets](https://www.data.gov.u
 The shapes of the datasets are
 
 i)	accident dataset: 597973 rows × 37 columns, 
+
 ii)	vehicle dataset: 1101591 rows × 27 columns, 
+
 iii)	casualty dataset: 781716 rows × 18 columns.
 
 I combined the datasets using the accident index and the vehicle reference. Prior to any data wrangling, the merged dataset had the shape of 781716 rows × 80 columns.
@@ -32,9 +34,13 @@ I combined the datasets using the accident index and the vehicle reference. Prio
 Some portion of this project was dedicated to understand whether accident severity may be considered as a function of certain conditions. In the dataset, accident severity is described in three classes: Slight, serious, and fatal. Exploratory data analysis reveals that the presence of some of the conditions may be playing a role in the severity of an accident. In fact, the investigation of the i) first point of impact, ii) light conditions, iii) weather conditions, and iv) casualty type parameters show that: 
 
 •	The likelihood of an accident being deathly is higher if the accidental hit is received from the front of the vehicle.
+
 •	Most accidents take place in daylight and good weather. 
+
 •	The proportion of fatal accidents that take place in dark over daylight is higher in comparison with the respective proportions in the slightly severe and seriously severe cases. 
+
 •	The relative proportions of different weather conditions hardly vary between the each class of accident severity. This may point out that accident severity may be independent of the weather conditions
+
 •	Overall, 50% of all the casualties in road accidents are car occupants. However, the largest two classes of casualties are the pedestrians and cyclists in large cities, for example in London. In fact, car occupants make up only the 5% of the casualty population in London.
 
 <a id='section4'></a>
@@ -42,10 +48,14 @@ Some portion of this project was dedicated to understand whether accident severi
 I built both a logistic regression and a KNN classification model to predict severity of hypothetical accidents. Both models predict whether a hypothetical accident would be classified as a slightly severe or a seriously severe accident based on information about 38 features. These features are listed as follows (not in the order of importance):
 
 i.	Driver-related features: age of driver, sex of driver, driver home area type, driver imd decile, journey purpose of driver.
+
 ii.	Vehicle-related features: age of vehicle, vehicle type, vehicle brand, engine capacity cc, propulsion code, towing and articulation, vehicle left hand drive.
+
 iii.	Spatio-temporal features: easting, northing, vehicle direction from, vehicle direction to, month, day of week, hour.
+
 iv.	Road-related features: road type, first road class, second road class, speed limit, junction location, junction detail, junction control, road surface conditions, special conditions at site, carriageway hazards, urban or rural area, trunk road flag, vehicle location restricted lane, pedestrian crossing human control, pedestrian crossing physical facilities.
-v.	Other features: first point of impact, vehicle manoeuvre, light conditions, weather conditions
+
+v.	Other features: first point of impact, vehicle manoeuvre, light conditions, weather conditions.
 
 The original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that the logistic regression in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately. The logistic regression classification model that was trained with the oversampled dataset was found to give the best result.
 
@@ -73,9 +83,13 @@ This study also identfied the top 10 interregional roads (A-Roads) with the high
 <a id='section7'></a>
 ### Tools
 Jupyter notebook 6.4.8.
+
 Numpy, pandas, sklearn
+
 Seaborn, matplotlib
+
 MySql
+
 Tableau
 
 <a id='section8'></a>
