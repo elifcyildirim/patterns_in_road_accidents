@@ -77,7 +77,7 @@ It is notable that all of the imbalance treatment techniques (SMOTE, oversamplin
 
 Finally, drivers' attention to the road and how responsible both the drivers and the pedestrians behave in traffic may be among many of the non-quantifiable features that are affecting the occurrence and severity of an accident. These are not incorporated into this model.
 
-![Metrics_of_the_Top_performing_models.png](images/Metrics_of_the_Top_performing_models.png)
+![Metrics_of_the_Top_performing_models.PNG](images/Metrics_of_the_Top_performing_models.PNG)
 
 <a id='section6'></a>
 ### Accident hotspots in the UK
