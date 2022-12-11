@@ -53,7 +53,7 @@ The best performing model predicts severity of hypothetical accidents based on:
 
 4. attributes of the vehicle (age, type, engine capacity),
 
-5. travel-related features such as the time (specifically whether the travel is between 8-9 am or not) and the vehicle's travel direction (from/to),
+5. travel-related features such as time (specifically whether the travel is between 8-9 am or not) and the vehicle's travel direction (from/to),
 
 6. first point of impact & vehicle's manoeuvre at the time of the accident.
 
