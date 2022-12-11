@@ -1,7 +1,8 @@
 # Patterns in Road Accidents: The case of United Kingdom
-![london_congested.jpeg](images/london_congested.jpeg)
 
 by Elif Cihan Yildirim
+
+![london_congested.jpeg](images/london_congested.jpeg)
 
 <a id='section1'></a>
 ## Summary
