@@ -39,7 +39,11 @@ I created a classification model that predicts the severity of accidents based o
 
 Before building the models, the original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that classification algorithms in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately.
 
-Recall and the true positives is the preferred evaluation metric in this project. In accordance with this, DecisionTreeClassifier model built in round 6 is the best predictive model in forecasting the severity of a hypothetical accident. Thanks to feature selection, this model has the least number of columns as input of all the 35 different models built in this project. It is possible to predict whether a road accident in the U.K. will result in severe or slight consequences based on
+Recall and the true positives is the preferred evaluation metric in this project. In accordance with this, DecisionTreeClassifier model built in round 6 is the best predictive model in forecasting the severity of a hypothetical accident. Thanks to feature selection, this model has the least number of columns as input of all the 35 different models built in this project. Metrics of the top performing models:
+
+![Metrics_of_the_Top_performing_models.PNG](images/Metrics_of_the_Top_performing_models.PNG)
+
+It is possible to predict whether a road accident in the U.K. will result in severe or slight consequences based on
 
 1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
 
@@ -62,8 +66,6 @@ Test accuracy of the initial models (before treating the data for imbalance) wer
 It is notable that all of the imbalance treatment techniques (SMOTE, oversampling, and undersampling) increased the recall at the cost of lower precision, which is actually preffered in the case of road accidents. In other words, I would prefer this model to predict a potentially 'slightly-severe' accident as 'seriously-severe', rather than a 'seriously-severe' potential accident as 'slightly-severe'. False positives are preferred over false negatives here. The final classification model is able to predict 36,152 seriously severe accidents out of 38,698 seriously severe accidents that happened in year 2016 (the validation dataset).
 
 Finally, drivers' attention to the road and how responsible both the drivers and the pedestrians behave in traffic may be among many of the non-quantifiable features that are affecting the occurrence and severity of an accident. These are not incorporated into this model.
-
-![Metrics_of_the_Top_performing_models.PNG](images/Metrics_of_the_Top_performing_models.PNG)
 
 <a id='section6'></a>
 ### Accident hotspots in the UK
