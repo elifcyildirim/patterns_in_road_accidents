@@ -2,11 +2,11 @@
 ![london_congested.jpeg](images/london_congested.jpeg)
 
 <a id='section1'></a>
-### Abstract
+### Summary
 World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. Among the results of this project, I present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020. Furthermore, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, light conditions etc.
 
 <a id='section2'></a>
-#### Data
+### Data
 For this project, I downloaded the [road safety datasets](https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data) for 2016-2020 which was published by the UK Department for Transport. The three datasets that are used in the project provide information on i) all registered accidents, with details on ii) the vehicles and iii) the casualties involved. The data is in encoded form rather than being textual strings and the lookup table is available from the same website.
 
 The shapes of the datasets are
