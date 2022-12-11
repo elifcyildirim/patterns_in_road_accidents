@@ -1,15 +1,5 @@
 # Patterns in Road Accidents: The case of United Kingdom
 ![london_congested.jpeg](images/london_congested.jpeg)
-### Index:
-
-* [Abstract](#section1)
-* [Data](#section2)
-* [Exploratory Data Analysis (EDA)](#section3)
-* [Machine Learning to Predict Accident Severity](#section4)
-* [Validation Metrics](#section5)
-* [Accident hotspots in the UK](#section6)
-* [Tools](#section7)
-* [References](#section8)
 
 <a id='section1'></a>
 ### Abstract
