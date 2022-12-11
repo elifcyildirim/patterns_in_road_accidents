@@ -43,7 +43,7 @@ Recall and the true positives is the preferred evaluation metric in this project
 
 1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
 
-2. attributes of the junctions travelled through (location, control type, details),
+2. attributes of the junctions travelled through (location, control type, details),g
 
 3. attributes of the driver (age, sex, driver's home area),
 
