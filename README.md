@@ -60,7 +60,7 @@ The best performing model predicts severity of hypothetical accidents based on:
 This list is not in the order of feature importance. All models were trained and tested with the data from the year 2017. The final model was validated twice, using the data from 2016 and 2020 separately.
 
 <a id='section5'></a>
-###  Model Evaluation Metrics
+###  Discussion on Model Evaluation Metrics
 Test accuracy of the initial models (before treating the data for imbalance) were above 80%, which may not seem too bad at first sight. The confusion matrix, however, tells a different story. Those models fail in predicting the seriously-severe accidents, which is too expensive for the case of the road accidents. Evidently, accuracy is not a suitable evaluation metric for this model and recall will be preferred as the model evaluation metrics.
 
 It is notable that all of the imbalance treatment techniques (SMOTE, oversampling, and undersampling) increased the recall at the cost of lower precision, which is actually preffered in the case of road accidents. In other words, I would prefer this model to predict a potentially 'slightly-severe' accident as 'seriously-severe', rather than a 'seriously-severe' potential accident as 'slightly-severe'. False positives are preferred over false negatives here. The final classification model is able to predict 36,152 seriously severe accidents out of 38,698 seriously severe accidents that happened in year 2016 (the validation dataset).
