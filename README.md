@@ -43,7 +43,7 @@ Recall and the true positives is the preferred evaluation metric in this project
 
 ![Metrics_of_the_Top_performing_models.PNG](images/Metrics_of_the_Top_performing_models.PNG)
 
-It is possible to predict whether a road accident in the U.K. will result in severe or slight consequences based on
+The best performing model predicts whether a road accident in the U.K. will result in severe or slight consequences based on: 
 
 1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
 
