@@ -49,11 +49,9 @@ Recall and the true positives is the preferred evaluation metric in this project
 
 4. attributes of the vehicle (age, type, engine capacity),
 
-5. the time (specifically whether the travel is between 8-9 am or not),
+5. travel-related features such as the time (specifically whether the travel is between 8-9 am or not) and the vehicle's travel direction (from/to),
 
-6. vehicle's travel direction (from/to),
-
-7. first point of impact & vehicle's manoeuvre at the time of the accident.
+6. first point of impact & vehicle's manoeuvre at the time of the accident.
 
 This list is not in the order of feature importance. The models were trained and tested using the data from the year 2017. The model is validated twice, using the data from 2016 and 2020 separately.
 
