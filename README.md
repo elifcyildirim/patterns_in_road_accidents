@@ -43,7 +43,7 @@ Recall and the true positives is the preferred evaluation metric in this project
 
 ![Metrics_of_the_Top_performing_models.PNG](images/Metrics_of_the_Top_performing_models.PNG)
 
-The best performing model predicts severity of hypothetical accidents based on: 
+The best performing model predicts severity of the hypothetical accidents based on: 
 
 1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
 
