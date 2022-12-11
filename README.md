@@ -17,7 +17,7 @@ ii)	vehicle dataset: 1101591 rows × 27 columns,
 
 iii)	casualty dataset: 781716 rows × 18 columns.
 
-Exploratory analysis was condcuted on all data sets and the predictive models were built only on the dataset that is created by combining the accident and vehicle datasets using the accident index and the vehicle reference.
+Exploratory analysis was conducted on all data sets and the predictive models were built only on the dataset that is created by combining the accident and vehicle datasets using the accident index and the vehicle reference.
 
 <a id='section3'></a>
 ### Exploratory Data Analysis (EDA)
