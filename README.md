@@ -13,7 +13,7 @@
 
 <a id='section1'></a>
 ### Abstract
-World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. Among the results of this project, I present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020. Furthermore, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, day of the week, light conditions etc.
+World Health Organization declares road traffic injuries as the leading cause of death for children and young adults (2022). Furthermore, millions of people are affected by traffic accidents every year. This project is designed to support the discussions about the road safety in the UK by providing a comprehensive view on the spatial, temporal, and demographic patterns in road accidents. Among the results of this project, I present the junctions and interregional roads that had been the accident hotspots in Great Britain between the years 2016 and 2020. Furthermore, I provide a machine learning model predicting the severity of hypothetical accidents based on factors such as the age and sex of driver, vehicle type, latitude and longitude, light conditions etc.
 
 <a id='section2'></a>
 #### Data
@@ -47,6 +47,8 @@ Some portion of this project was dedicated to understand whether accident severi
 ### Machine Learning to Predict Accident Severity
 I created a classification model that predicts the severity of accidents based on factors such as driver's age, vehicle type, time, light conditions etc. I built a model selection pipeline (including Logistic Regression, KNN, Decision Tree and Random Forest classification algorithms), performed feature selection using the K-best algorithm, optimized model hyperparameters using random search and fine-tuned with cross-validation. 35 different models were created before picking the best performing model, which is a DecisionTreeClassifier.
 
+The original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that classification algorithms in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately.
+
 Recall and the true positives is the preferred evaluation metric in this project. In accordance with this, DecisionTreeClassifier model built in round 6 is the best predictive model in forecasting the severity of a hypothetical accident. Thanks to feature selection, this model has the least number of columns as input of all the 35 different models built in this project. It is possible to predict whether a road accident in the U.K. will result in severe or slight consequences based on
 
 1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
@@ -63,11 +65,7 @@ Recall and the true positives is the preferred evaluation metric in this project
 
 7. first point of impact & vehicle's manoeuvre at the time of the accident.
 
-The list is not in the order of feature importance.
-
-The original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that classification algorithms in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately.
-
-The models were trained and tested using the data from the year 2017. The model is validated twice, using the data from 2016 and 2020 separately.
+This list is not in the order of feature importance. The models were trained and tested using the data from the year 2017. The model is validated twice, using the data from 2016 and 2020 separately.
 
 <a id='section5'></a>
 ###  Model Evaluation Metrics
