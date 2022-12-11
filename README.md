@@ -27,7 +27,7 @@ ii)	vehicle dataset: 1101591 rows × 27 columns,
 
 iii)	casualty dataset: 781716 rows × 18 columns.
 
-I combined the datasets using the accident index and the vehicle reference. Prior to any data wrangling, the merged dataset had the shape of 781716 rows × 80 columns.
+Exploratory analysis was condcuted on all data sets and the predictive models were built only on the dataset that is created by combining the accident and vehicle datasets using the accident index and the vehicle reference.
 
 <a id='section3'></a>
 ### Exploratory Data Analysis (EDA)
@@ -39,35 +39,45 @@ Some portion of this project was dedicated to understand whether accident severi
 
 •	The proportion of fatal accidents that take place in dark over daylight is higher in comparison with the respective proportions in the slightly severe and seriously severe cases. 
 
-•	The relative proportions of different weather conditions hardly vary between the each class of accident severity. This may point out that accident severity may be independent of the weather conditions
+•	The relative proportions of different weather conditions hardly vary between the each class of accident severity. This may point out that accident severity may be independent of the weather conditions.
 
 •	Overall, 50% of all the casualties in road accidents are car occupants. However, the largest two classes of casualties are the pedestrians and cyclists in large cities, for example in London. In fact, car occupants make up only the 5% of the casualty population in London.
 
 <a id='section4'></a>
 ### Machine Learning to Predict Accident Severity
-I built both a logistic regression and a KNN classification model to predict severity of hypothetical accidents. Both models predict whether a hypothetical accident would be classified as a slightly severe or a seriously severe accident based on information about 38 features. These features are listed as follows (not in the order of importance):
+I created a classification model that predicts the severity of accidents based on factors such as driver's age, vehicle type, time, light conditions etc. I built a model selection pipeline (including Logistic Regression, KNN, Decision Tree and Random Forest classification algorithms), performed feature selection using the K-best algorithm, optimized model hyperparameters using random search and fine-tuned with cross-validation. 35 different models were created before picking the best performing model, which is a DecisionTreeClassifier.
 
-i.	Driver-related features: age of driver, sex of driver, driver home area type, driver imd decile, journey purpose of driver.
+Recall and the true positives is the preferred evaluation metric in this project. In accordance with this, DecisionTreeClassifier model built in round 6 is the best predictive model in forecasting the severity of a hypothetical accident. Thanks to feature selection, this model has the least number of columns as input of all the 35 different models built in this project. It is possible to predict whether a road accident in the U.K. will result in severe or slight consequences based on
 
-ii.	Vehicle-related features: age of vehicle, vehicle type, vehicle brand, engine capacity cc, propulsion code, towing and articulation, vehicle left hand drive.
+1. attributes of the road (speed limit, light conditions, road type, second road class, urban/rural area, easting/northing),
 
-iii.	Spatio-temporal features: easting, northing, vehicle direction from, vehicle direction to, month, day of week, hour.
+2. attributes of the junctions travelled through (location, control type, details),
 
-iv.	Road-related features: road type, first road class, second road class, speed limit, junction location, junction detail, junction control, road surface conditions, special conditions at site, carriageway hazards, urban or rural area, trunk road flag, vehicle location restricted lane, pedestrian crossing human control, pedestrian crossing physical facilities.
+3. attributes of the driver (age, sex, driver's home area),
 
-v.	Other features: first point of impact, vehicle manoeuvre, light conditions, weather conditions.
+4. attributes of the vehicle (age, type, engine capacity),
 
-The original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that the logistic regression in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately. The logistic regression classification model that was trained with the oversampled dataset was found to give the best result.
+5. the time (specifically whether the travel is between 8-9 am or not),
 
-The model was trained and tested using the data from the year 2017. The model is validated twice, using the data from 2016 and 2020 separately. Both the test and validation were carried out both for the logistic regression and KNN classification and it is found that logistic regression classification performs better than the KNN classifier in this specific problem.
+6. vehicle's travel direction (from/to),
+
+7. first point of impact & vehicle's manoeuvre at the time of the accident.
+
+The list is not in the order of feature importance.
+
+The original classes in the accident severity (slight, serious, and fatal) were reduced to two classes by grouping the serious and fatal together (as ‘serious’). As a matter of fact, both the serious and fatal accidents would need similar level of attention. This decision was also based on the fact that the three classes in the target had very different sizes. Especially, the size of the ‘fatal’ accidents is substantially smaller than the slightly severe accidents. It is known that classification algorithms in the case of imbalanced target class sizes favor the major class if the imbalance in the training dataset is not treated. Combining these classes reduced this imbalance but not entirely. The training dataset was treated for imbalance using i) SMOTE, ii) undersampling, and iii) oversampling separately.
+
+The models were trained and tested using the data from the year 2017. The model is validated twice, using the data from 2016 and 2020 separately.
 
 <a id='section5'></a>
-### Validation Metrics
-The accuracy of the initial logistic regression model (before treatment with oversampling) is 80%, which may not seem too bad at first sight. The confusion matrix, however, tells a different story. Out of 5111 seriously severe accidents, the model was able to predict 215 true positives only. This means that the initial model fails in predicting the seriously-severe accidents, which is too expensive for the case of the road accidents. Evidently, accuracy is not a suitable evaluation metric for this model. In the case of the accident severity predictions, recall and confusion matrix will be preferred as the model evaluation metrics.
+###  Model Evaluation Metrics
+Test accuracy of the initial models (before treating the data for imbalance) were above 80%, which may not seem too bad at first sight. The confusion matrix, however, tells a different story. Those models fail in predicting the seriously-severe accidents, which is too expensive for the case of the road accidents. Evidently, accuracy is not a suitable evaluation metric for this model. Recall and confusion matrix will be preferred as the model evaluation metrics.
 
-It is notable that all of the imbalance treatment techniques (SMOTE, oversampling, and undersampling) increased the recall at the cost of lower precision, which is actually preffered in the case of road accidents. In other words, I would prefer this model to predict a potentially 'slightly-severe' accident as 'seriously-severe', rather than a 'seriously-severe' potential accident as 'slightly-severe'. False positives are preferred over false negatives here. The final logistic regression model which was trained with the oversampled dataset was able to predict 3455 seriously severe accidents in the test set which included 5111 seriously severe accidents.
+It is notable that all of the imbalance treatment techniques (SMOTE, oversampling, and undersampling) increased the recall at the cost of lower precision, which is actually preffered in the case of road accidents. In other words, I would prefer this model to predict a potentially 'slightly-severe' accident as 'seriously-severe', rather than a 'seriously-severe' potential accident as 'slightly-severe'. False positives are preferred over false negatives here. The final classification model is able to predict 36,152 seriously severe accidents out of 38,698 seriously severe accidents that happened in year 2016 (the validation dataset).
 
 Finally, drivers' attention to the road and how responsible both the drivers and the pedestrians behave in traffic may be among many of the non-quantifiable features that are affecting the occurrence and severity of an accident. These are not incorporated into this model.
+
+![Metrics_of_the_Top_performing_models.png](images/Metrics_of_the_Top_performing_models.png)
 
 <a id='section6'></a>
 ### Accident hotspots in the UK
