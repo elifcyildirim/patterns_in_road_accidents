@@ -58,7 +58,7 @@ The best performing model predicts severity of the hypothetical accidents based 
 
 5. travel-related features such as time (specifically whether the travel is between 8-9 am or not) and the vehicle's travel direction (from/to),
 
-6. first point of impact & vehicle's manoeuvre at the time of the accident.
+6. first point of impact (back, offside, nearside etc.) & vehicle's manoeuvre (parked, reversing, U-turning, overtaking etc.) at the time of the accident.
 
 This list is not in the order of feature importance. All models were trained and tested with the data from the year 2017. The final model was validated twice, using the data from 2016 and 2020 separately.
 
