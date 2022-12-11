@@ -57,7 +57,7 @@ The best performing model predicts severity of hypothetical accidents based on:
 
 6. first point of impact & vehicle's manoeuvre at the time of the accident.
 
-This list is not in the order of feature importance. The models were trained and tested using the data from the year 2017. The final model was validated twice, using the data from 2016 and 2020 separately.
+This list is not in the order of feature importance. All models were trained and tested with the data from the year 2017. The final model was validated twice, using the data from 2016 and 2020 separately.
 
 <a id='section5'></a>
 ###  Model Evaluation Metrics
